@@ -5,7 +5,7 @@
 	"description": "Turns GitHub tags into WowInterface uploads through CurseForce and magic!",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "foreman start webDebug"
 	},
 	"dependencies": {
 		"bl": "1.0.x",
