@@ -1,2 +1,1 @@
-web: node server.js
-webDebug: node RemoteDebug.js -machineport 5858 server.js
+web: with_ngrok node --debug=5858 server.js
