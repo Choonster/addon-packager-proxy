@@ -1,7 +1,8 @@
 var Strings = require('./strings');
 
 var fs = require('fs'),
-	cp = require('child_process');
+  cp = require('child_process'),
+  stderr = require('process').stderr;
 
 module.exports = function(repo, name, callback){
 	var path = './tmp/' + name;
@@ -22,6 +23,7 @@ module.exports = function(repo, name, callback){
 			});
 		} else if(!stats) {
 			var process = cp.spawn('git', ['clone', '--', repo, path]);
+			process.stderr.pipe(stderr);
 			process.on('close', function(status){
 				if(status == 0)
 					callback(null, path);
