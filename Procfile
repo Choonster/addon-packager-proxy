@@ -1,1 +1,2 @@
-web: with_ngrok node --debug=5858 server.js
+web: node server.js
+web: with_ngrok node --debug server.js
