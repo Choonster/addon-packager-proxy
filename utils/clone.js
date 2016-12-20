@@ -2,7 +2,7 @@ var Strings = require('./strings');
 
 var fs = require('fs'),
   cp = require('child_process'),
-  stderr = require('process').stderr;
+  stderr = process.stderr;
 
 module.exports = function(repo, name, callback){
 	var path = './tmp/' + name;
