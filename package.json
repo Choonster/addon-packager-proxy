@@ -3,7 +3,10 @@
 	"author": "Adrian L Lange",
 	"version": "0.7.2",
 	"description": "Turns GitHub tags into WowInterface uploads through CurseForce and magic!",
-	"main": "server.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "start.sh"
+  },
 	"dependencies": {
 		"bl": "1.0.x",
 		"express": "4.11.x",
