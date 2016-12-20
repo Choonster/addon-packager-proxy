@@ -153,12 +153,12 @@ function updateWowi(details, postData){
 
 			Log.info(Strings.ADDON_UPLOADING);
 
-			//request.post(postData, function(err, res, body){
-			//	if(!handleErrors(err, res, body))
-			//		return;
+			request.post(postData, function(err, res, body){
+				if(!handleErrors(err, res, body))
+					return;
 
-			//	Log.info(Strings.ADDON_UPLOADED.replace('%s', details.path).replace('%s', details.tag));
-			//});
+				Log.info(Strings.ADDON_UPLOADED.replace('%s', details.path).replace('%s', details.tag));
+			});
 		});
 	});
 }
