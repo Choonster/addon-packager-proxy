@@ -82,7 +82,7 @@ app.get('/force/:repo/:tag', function(req, res){
 	Log.info(Strings.FORCED_CHECK_MESSAGE.replace('%s', name).replace('%s', tag));
 
 	details.tag = tag;
-	details.github_repo = res.payload.repository.git_url;
+	details.github_repo = 'https://www.github.com/Choonster-WoW-AddOns-/' + name // FIXME
 	new Packager(details, ++workID, true);
 });
 
