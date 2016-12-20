@@ -1,2 +1,2 @@
 web: node server.js
-web: with_ngrok node --debug server.js
+webDebug: with_ngrok node --debug server.js
